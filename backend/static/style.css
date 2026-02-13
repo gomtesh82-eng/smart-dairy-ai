@@ -1,0 +1,16 @@
+body{
+	font-family:Arial;
+	test-align:center;
+	margin-top:50px;
+	
+}
+h1{
+	color:crimson;
+	text-align: center;
+	font-weight: bold;
+}
+.para{
+	text-align: center;
+	color: darkgreen;
+	font-weight: 200;
+}
