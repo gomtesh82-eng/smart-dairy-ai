@@ -8,4 +8,4 @@ This project helps dairy farmers to:
 - Track expenses and billing
 - Provide animal care instructions
 
-Technologies: MERN Stack, Machine Learning
+Technologies: Basic Web development, Machine Learning
