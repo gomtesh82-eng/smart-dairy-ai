@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Dairy Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h2>Smart Dairy AI</h2>
+    <p>Farmer Dashboard</p>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="#">Dashboard</a>
+    <a href="/milkentry">Milk Entry</a>
+    <a href="#">Animals</a>
+    <a href="#">Expenses</a>
+    <a href="#">Reports</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <h2>Dashboard</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Today Milk</h3>
+            <p>18.5 L</p>
+        </div>
+
+        <div class="card">
+            <h3>Today Income</h3>
+            <p>₹ 850</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Animals</h3>
+            <p>4</p>
+        </div>
+
+        <div class="card alert">
+            <h3>Alert</h3>
+            <p>Milk decreased</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
