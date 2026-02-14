@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Smart Dairy Dashboard</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
@@ -14,7 +14,7 @@
 
 <!-- Sidebar -->
 <div class="sidebar">
-    <a href="#">Dashboard</a>
+    <a href="/">Dashboard</a>
     <a href="/milkentry">Milk Entry</a>
     <a href="#">Animals</a>
     <a href="#">Expenses</a>
@@ -28,24 +28,30 @@
 
     <div class="cards">
 
+        <!-- Today Milk -->
         <div class="card">
             <h3>Today Milk</h3>
-            <p>18.5 L</p>
+            <p>{{ today_milk }} L</p>
         </div>
 
+        <!-- Today Income -->
         <div class="card">
             <h3>Today Income</h3>
-            <p>₹ 850</p>
+            <p>₹ {{ today_income }}</p>
         </div>
 
+        <!-- Total Animals -->
         <div class="card">
             <h3>Total Animals</h3>
-            <p>4</p>
+            <p>{{ total_animals }}</p>
         </div>
 
+        <!-- Milk Status -->
         <div class="card alert">
-            <h3>Alert</h3>
-            <p>Milk decrease</p>
+            <h3>Milk Status</h3>
+            <p style="font-size:18px; font-weight:bold; color: {{ status_color }};">
+                {{ milk_status }}
+            </p>
         </div>
 
     </div>
