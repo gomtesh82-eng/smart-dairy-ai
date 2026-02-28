@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>स्मार्ट डेअरी डॅशबोर्ड</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        header {
+            background: #2e7d32;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #1b5e20;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+        }
+
+        .cow {
+            background: #1976d2;
+        }
+
+        .buffalo {
+            background: #6a1b9a;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+         footer {
+                margin-top: 40px;
+                padding: 15px;
+                text-align: center;
+                background: #2e7d32;
+                color: white;
+                font-size: 14px;
+            }
+    </style>
+</head>
+<body>
+
+<header>
+    स्मार्ट डेअरी व्यवस्थापन प्रणाली
+</header>
+
+<nav>
+    <a href="/">मुख्य पान</a>
+    <a href="/add_milk">दूध नोंद करा</a>
+    <a href="/report">अहवाल पहा</a>
+    <a href="/farmers">शेतकरी जोडा / पाहा</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>आजची दूध संकलन माहिती</h2>
+        <div class="stats">
+            <div class="stat-box cow">
+                <h3>गाईचे दूध</h3>
+                <p>एकूण लिटर: {{ cow_qty }}</p>
+                <p>एकूण रक्कम: ₹ {{ cow_amount }}</p>
+            </div>
+
+            <div class="stat-box buffalo">
+                <h3>म्हशीचे दूध</h3>
+                <p>एकूण लिटर: {{ buffalo_qty }}</p>
+                <p>एकूण रक्कम: ₹ {{ buffalo_amount }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>त्वरित पर्याय</h3>
+        <a href="/add_milk" class="btn">नवीन नोंद करा</a>
+    </div>
+
+</div>
+<footer>
+    <p>
+        © 2026 Smart Dairy Management System  
+        | Developed by <b>Gomtesh Patil</b>  
+        | Module 1 Completed 🚀
+    </p>
+</footer>
+</body>
+</html>

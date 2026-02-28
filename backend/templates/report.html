@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>दूध अहवाल</title>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f1f8e9;
+            padding-bottom: 50px;
+        }
+
+        .header {
+            background: #1b5e20;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2e7d32;
+            margin: 30px 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin: 30px 20px 10px;
+            color: #1b5e20;
+            font-weight: bold;
+        }
+
+        table {
+            width: 95%;
+            margin: auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #2e7d32;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tr:hover {
+            background: #e8f5e9;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+        
+      footer {
+                margin-top: 40px;
+                padding: 15px;
+                text-align: center;
+                background: #2e7d32;
+                color: white;
+                font-size: 14px;
+            }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    📊 दूध संकलन अहवाल
+</div>
+
+<h2>पूर्ण तपशील</h2>
+
+<div class="section-title">🐄 गाईचे दूध</div>
+<table>
+    <tr>
+        <th>शेतकरी</th>
+        <th>तारीख</th>
+        <th>वेळ</th>
+        <th>लिटर</th>
+        <th>फॅट</th>
+        <th>एसएनएफ</th>
+        <th>रक्कम (₹)</th>
+    </tr>
+    {% for row in cow_data %}
+    <tr>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+        <td>{{ row[6] }}</td>
+        <td>{{ row[7] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="section-title">🐃 म्हशीचे दूध</div>
+<table>
+    <tr>
+        <th>शेतकरी</th>
+        <th>तारीख</th>
+        <th>वेळ</th>
+        <th>लिटर</th>
+        <th>फॅट</th>
+        <th>एसएनएफ</th>
+        <th>रक्कम (₹)</th>
+    </tr>
+    {% for row in buffalo_data %}
+    <tr>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+        <td>{{ row[6] }}</td>
+        <td>{{ row[7] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/" class="back-btn">← डॅशबोर्डवर परत जा</a>
+<footer>
+    <p>
+        © 2026 Smart Dairy Management System  
+        | Developed by <b>Gomtesh Patil</b>  
+        | Module 1 Completed 🚀
+    </p>
+</footer>
+
+</body>
+</html>
